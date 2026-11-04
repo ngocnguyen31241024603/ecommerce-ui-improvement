@@ -1,22 +1,21 @@
 # Giao diện thương mại điện tử mẫu — HTML5 & CSS3
 
 ## Các file trong dự án
-- `index.html`: cấu trúc trang và nội dung 4 thẻ sản phẩm mẫu.
+- `index.html`: cấu trúc trang và nội dung 12 thẻ sản phẩm mẫu.
 - `style.css`: định dạng giao diện, màu sắc, khoảng cách và bố cục responsive.
 - `AI_USAGE.md`: prompt đã sử dụng và checklist để ghi nhận việc kiểm tra, tự điều chỉnh.
 
 ## Đối chiếu với bài làm
-Dự án thực hiện phương án ở phần 3: thiết kế lại thẻ sản phẩm lấy cảm hứng từ Coolmate, sử dụng nền trắng, chữ đen và điểm nhấn xanh dương. Mỗi thẻ có hình minh họa, tên, giá bán, giá gốc, tỷ lệ giảm giá và nút thao tác. Trang có 4 sản phẩm mẫu.
+Dự án thực hiện phương án ở phần 3: thiết kế lại thẻ sản phẩm lấy cảm hứng từ Coolmate, sử dụng nền trắng, chữ đen và điểm nhấn xanh dương. Mỗi thẻ có hình minh họa, tên, giá bán, giá gốc, tỷ lệ giảm giá và nút thao tác. Trang có 12 sản phẩm mẫu.
 
 ## Cách chạy
-1. Giải nén ZIP.
-2. Mở thư mục `coolmate-html-css` bằng Visual Studio Code.
-3. Mở `index.html` bằng trình duyệt; hoặc dùng Live Server nếu đã cài.
-4. Khi chỉnh sửa file, lưu lại và tải lại trang để xem thay đổi.
+1. Mở thư mục dự án bằng Visual Studio Code.
+2. Mở `index.html` bằng trình duyệt; hoặc dùng Live Server nếu đã cài.
+3. Khi chỉnh sửa file, lưu lại và tải lại trang để xem thay đổi.
 
 ## Checklist kiểm tra
 - Trang có tiêu đề và khu vực sản phẩm.
-- Hiển thị đủ 4 sản phẩm; mỗi sản phẩm có hình minh họa, tên, giá, giá gốc, tỷ lệ giảm giá và nút thao tác.
+- Hiển thị đủ 12 sản phẩm; mỗi sản phẩm có hình minh họa, tên, giá, giá gốc, tỷ lệ giảm giá và nút thao tác.
 - Kiểm tra bố cục ở màn hình máy tính và điện thoại.
 - Kiểm tra hình, nội dung, khoảng cách và nút không bị tràn/chồng lấp.
 - Nhấn nút “Xem sản phẩm”: nút hiện thông báo minh họa, chưa thực hiện mua hàng thật.
