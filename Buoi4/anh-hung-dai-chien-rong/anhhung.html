@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anh hùng JavaScript - Đại chiến rồng</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="anhhung.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header><p class="eyebrow">JAVASCRIPT BATTLE · LEVEL 5</p><h1>ANH HÙNG <span>ĐẠI CHIẾN RỒNG</span></h1><p>Chọn phân cấp và chiến đấu theo lượt!</p></header>
+    <section class="setup" aria-label="Thiết lập nhân vật">
+      <label>Tên anh hùng <input id="name" value="Nguyễn Thị Khánh Ngọc" maxlength="35"></label>
+      <label>Phân cấp <select id="role"><option value="a">Chiến Binh</option><option value="b">Sát Thủ</option><option value="c">Thợ Săn</option></select></label>
+      <button id="start">Bắt đầu trận đấu</button>
+      <button id="sound" class="secondary" aria-pressed="true">🔊 Âm thanh: Bật</button>
+    </section>
+    <section class="arena" aria-label="Đấu trường">
+      <div class="fighter hero" id="hero"><div class="health-label"><strong id="heroName">ANH HÙNG</strong><span id="heroHP">105 / 105</span></div><div class="bar"><div id="heroBar"></div></div><div class="hero-image"><img src="images.jpeg" alt="Hình ảnh anh hùng Spider-Man"></div><span class="fighter-name">⚔ ANH HÙNG</span><span class="damage" id="heroDamage"></span></div>
+      <div class="versus">VS</div>
+      <div class="fighter dragon" id="dragon"><div class="health-label"><strong>RỒNG GIÀ</strong><span id="dragonHP">600 / 600</span></div><div class="bar"><div id="dragonBar"></div></div><div class="dragon-image" aria-label="Rồng">🐉</div><span class="fighter-name">🔥 RỒNG GIÀ</span><span class="damage" id="dragonDamage"></span></div>
+      <div id="projectile" aria-hidden="true"></div>
+    </section>
+    <div class="controls"><button id="attack" disabled>⚔ Tấn công</button><button id="reset" class="secondary">↻ Chơi lại</button></div>
+    <section class="details"><div><h2>CHỈ SỐ ANH HÙNG</h2><p id="stats">Chọn phân cấp và nhấn bắt đầu.</p></div><div><h2>NHẬT KÝ TRẬN ĐẤU</h2><div id="log" role="log" aria-live="polite"><p>Trận chiến đang chờ cậu!</p></div></div></section>
+    <footer>Nhấn Tấn công cho mỗi lượt. Âm thanh được tạo trực tiếp bằng trình duyệt.</footer>
+  </main>
+</body>
+</html>
