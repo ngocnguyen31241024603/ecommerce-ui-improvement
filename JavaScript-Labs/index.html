@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio Lab 08, Lab 09 và Lab 10 của Nguyễn Thị Khánh Ngọc, học phần Phát triển ứng dụng thương mại điện tử.">
+    <title>Thực hành JavaScript · Nguyễn Thị Khánh Ngọc</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-name" href="./index.html">Khánh Ngọc</a>
+            <nav aria-label="Điều hướng chính">
+                <a href="#labs">Bài thực hành</a>
+                <a href="#tu-danh-gia">Tự đánh giá</a>
+                <a href="https://github.com/ngocnguyen31241024603">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <section class="intro" aria-labelledby="page-title">
+            <div class="intro-copy">
+                <p class="course">Phát triển ứng dụng thương mại điện tử</p>
+                <h1 id="page-title">Thực hành<br>JavaScript</h1>
+                <p class="intro-text">Qua ba Lab, em học cách xử lý dữ liệu, cập nhật nội dung trên trang và phản hồi thao tác của người dùng. Em dùng JavaScript để kiểm tra biểu mẫu, tạo hiệu ứng và tải dữ liệu vào giao diện mà vẫn giữ nguyên trang đang mở.</p>
+                <a class="primary-link" href="#labs">Xem các bài Lab <span aria-hidden="true">↓</span></a>
+            </div>
+            <aside class="profile" aria-labelledby="student-name">
+                <img src="./images/anh-ca-nhan.jpg" alt="Chân dung Nguyễn Thị Khánh Ngọc" width="960" height="1280">
+                <div class="profile-copy">
+                    <h2 id="student-name">Nguyễn Thị Khánh Ngọc</h2>
+                    <dl>
+                        <div><dt>MSSV</dt><dd>31241024603</dd></div>
+                        <div><dt>Lớp học phần</dt><dd>26C1INF50902702</dd></div>
+                    </dl>
+                </div>
+            </aside>
+        </section>
+
+        <section id="labs" class="labs" aria-labelledby="labs-title">
+            <div class="section-heading">
+                <h2 id="labs-title">Bài thực hành và kỹ năng</h2>
+                <p>29 Exercise trong 3 bài Lab</p>
+            </div>
+            <div class="lab-grid">
+                <article class="lab-card">
+                    <p class="lab-label">Lab 08</p>
+                    <h3 lang="en">Language Foundations</h3>
+                    <p>Em thử nhúng mã vào HTML và nạp mã từ tệp riêng, rồi dùng Console để tìm lỗi. Em dùng biến và hàm để tính tổng tiền, duyệt Array và Object để dựng danh sách quốc gia, đồng thời thực hành xử lý chuỗi và ngày với String và Date.</p>
+                    <a class="lab-link" href="./Lab08/index.html">Mở Lab 08 <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="lab-card">
+                    <p class="lab-label">Lab 09</p>
+                    <h3 lang="en">DOM and Events</h3>
+                    <p>Em duyệt cây DOM để tìm phần tử, đổi nội dung và thuộc tính, rồi thêm hoặc xóa thành phần trên trang. Em dùng sự kiện bấm và rê chuột để đổi giao diện, đặt điểm dừng trong DevTools và chặn gửi biểu mẫu khi còn ô trống.</p>
+                    <a class="lab-link" href="./Lab09/index.html">Mở Lab 09 <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="lab-card">
+                    <p class="lab-label">Lab 10</p>
+                    <h3 lang="en">jQuery</h3>
+                    <p>Em kiểm tra thư viện đã nạp, dùng bộ chọn và sự kiện jQuery để chèn ảnh, tạo hiệu ứng trượt và mờ dần. Với <code>$.get()</code>, em tải danh sách thành phố và dùng jqXHR để xử lý khi yêu cầu thành công hoặc thất bại.</p>
+                    <a class="lab-link" href="./Lab10/index.html">Mở Lab 10 <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+        </section>
+
+        <section id="tu-danh-gia" class="reflection" aria-labelledby="reflection-title">
+            <h2 id="reflection-title">Tự đánh giá</h2>
+            <p>Qua ba Lab, em biết dùng hàm để xử lý dữ liệu, thao tác DOM và gắn sự kiện để giao diện phản hồi người dùng. Lab 10 khó nhất với em vì thao tác tải dữ liệu cần xử lý cả lúc đang chờ, khi thành công và khi mất mạng. Em đã thử tắt mạng trong DevTools để quan sát thông báo lỗi và kiểm tra vòng xoay tải biến mất sau khi đóng thông báo. Với website thương mại điện tử, em có thể áp dụng để kiểm tra biểu mẫu đăng ký, cập nhật tổng tiền giỏ hàng khi đổi số lượng và tải danh sách sản phẩm. Em muốn luyện thêm cách gỡ lỗi yêu cầu mạng và viết hàm dễ kiểm tra, dễ tái sử dụng.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>Nguyễn Thị Khánh Ngọc · UEH</span>
+            <a href="https://github.com/ngocnguyen31241024603/ecommerce-ui-improvement">Repository của học phần</a>
+        </div>
+    </footer>
+</body>
+</html>

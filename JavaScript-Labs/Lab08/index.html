@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 08 · Language Foundations</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-name" href="../index.html">Khánh Ngọc</a>
+            <nav aria-label="Điều hướng Lab">
+                <a href="../index.html#labs">← Danh sách các Lab</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="container detail">
+        <p class="lab-label">Lab 08</p>
+        <h1 lang="en">Language Foundations</h1>
+        <p class="detail-intro">Thực hành cú pháp và dữ liệu JavaScript, từ cách nạp mã đến viết hàm và tạo đối tượng.</p>
+        <h2 class="exercise-heading">Danh sách Exercise</h2>
+        <p class="detail-intro">Exercise 8.2–8.5 dùng chung một trang HTML. Mở Chrome DevTools để xem bài 8.5.</p>
+        <ol class="exercise-list">
+            <li class="exercise">
+                <h3><a href="./exercise-8-1.html">Exercise 8.1 – Enabling/Disabling JavaScript</a></h3>
+                <p>Em mở cùng một trang trong Chrome hai lần, lần lượt với JavaScript bật và tắt. Em đối chiếu hai kết quả để nhận biết phần nội dung phụ thuộc vào việc trình duyệt thực thi mã JavaScript.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough02.html">Exercise 8.2 – Embedded JavaScript</a></h3>
+                <p>Em đặt lệnh alert() trong thẻ &lt;script&gt; của tệp HTML. Khi mở trang trong Chrome, hộp thoại “Hello World!” xuất hiện, cho thấy đoạn mã nhúng được thực thi ngay trong quá trình tải trang.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough02.html">Exercise 8.3 – External JavaScript</a></h3>
+                <p>Em dùng thẻ &lt;script&gt; có thuộc tính src để liên kết trang HTML với tệp hello.js. Khi mở và tải lại trang, tệp JavaScript bên ngoài hiển thị lời chào cùng hai giá trị bộ đếm theo thứ tự “Count = 1” và “Count = 2”.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough02.html">Exercise 8.4 – Using Noscript</a></h3>
+                <p>Em thêm thông báo vào thẻ &lt;noscript&gt; để hướng dẫn người dùng khi JavaScript bị tắt. Sau khi tắt JavaScript trong Chrome và tải lại trang, em kiểm tra nội dung trong thẻ này đã xuất hiện.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough02.html">Exercise 8.5 – Using the Browser Console</a></h3>
+                <p>Em dùng Console trong Chrome DevTools để tìm nguyên nhân của ReferenceError và sửa lại tên document bị gõ sai. Sau khi tải lại trang và thấy bộ đếm xuất hiện, em kiểm tra các biến count, output và temp. Em cũng thử console.log(), console.warn() và console.error() để phân biệt thông báo, cảnh báo và lỗi.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough06.html">Exercise 8.6 – Using Built-in JavaScript Objects</a></h3>
+                <p>Em tạo chuỗi nguyên thủy và đối tượng String rồi kiểm tra kiểu dữ liệu bằng typeof và so sánh bằng ==, ===. Hai đối tượng String được khởi tạo riêng cho kết quả false khi so sánh với nhau bằng cả hai toán tử. Em dùng thêm Date và Math để hiển thị ngày giờ, số π, căn bậc hai và số ngẫu nhiên.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough07.html">Exercise 8.7 – Arrays</a></h3>
+                <p>Em thêm ngày vào đầu và cuối mảng bằng unshift() và push() để sắp đủ bảy ngày từ Sunday đến Saturday. Em dùng mảng này để dựng bảng lịch từ ngày 1 đến 30 và làm nổi bật nhãn Tuesday và Thursday ở hàng tiêu đề.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough08.html">Exercise 8.8 – JavaScript Functions</a></h3>
+                <p>Em viết hàm makeDiv() để tạo và trả về chuỗi HTML, rồi thay đổi vị trí gọi hàm để hai phần tử div xuất hiện bên dưới tiêu đề kết quả. Trong Console, phép kiểm tra typeof divHtml ở ngoài hàm trả về “undefined”, giúp em xác định phạm vi của biến cục bộ.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough09.html">Exercise 8.9 – Functions as Objects</a></h3>
+                <p>Em tính thuế và tổng tiền cho đơn hàng có hai sản phẩm, mỗi sản phẩm giá $15.00. Em thử gán hàm cho biến và truyền hàm tính thuế làm đối số, qua các lần thử vẫn nhận được tiền thuế $1.50 và tổng $31.50. Em dùng Console để kiểm tra phạm vi của biến taxRate.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough10.html">Exercise 8.10 – Creating JavaScript Objects</a></h3>
+                <p>Em tạo đối tượng đơn hàng bằng cú pháp gán thuộc tính, object literal và hàm khởi tạo. Em kiểm tra sự khác nhau giữa truy cập phương thức total và gọi total() để lấy giá trị tính được. Sau đó, em gọi output() cho hai đơn hàng và đối chiếu tổng tiền lần lượt là 30 và 40.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab08-walkthrough11.html">Exercise 8.11 – Arrays of Objects</a></h3>
+                <p>Em tạo mảng gồm năm đối tượng Country rồi duyệt các thuộc tính bằng vòng lặp for...in. Em dùng mã ISO để tạo đường dẫn ảnh cờ và hiển thị mỗi nước thành một thẻ có tên, mã ISO, thủ đô và dân số.</p>
+            </li>
+        </ol>
+    </main>
+</body>
+</html>

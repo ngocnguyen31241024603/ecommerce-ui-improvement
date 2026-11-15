@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 09 · DOM and Events</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-name" href="../index.html">Khánh Ngọc</a>
+            <nav aria-label="Điều hướng Lab">
+                <a href="../index.html#labs">← Danh sách các Lab</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="container detail">
+        <p class="lab-label">Lab 09</p>
+        <h1 lang="en">DOM and Events</h1>
+        <p class="detail-intro">Thực hành truy cập và thay đổi nội dung HTML, xử lý sự kiện và kiểm tra dữ liệu biểu mẫu.</p>
+        <h2 class="exercise-heading">Danh sách Exercise</h2>
+        <p class="detail-intro">Exercise 9.5 và 9.6 dùng chung một trang HTML. Dùng Sources trong Chrome DevTools để đặt điểm dừng cho bài 9.6.</p>
+        <ol class="exercise-list">
+            <li class="exercise">
+                <h3><a href="./lab09-walkthrough01.html">Exercise 9.1 – Basic DOM Selection</a></h3>
+                <p>Em dùng các bộ chọn DOM để truy cập tiêu đề, ô nhập và các đoạn văn trên trang. Em thay tiêu đề, đưa văn bản hoặc nội dung HTML của đoạn được chọn vào ô nhập, rồi thử ẩn ô nhập và đổi nền vùng thống kê sang màu xanh.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab09-walkthrough02.html">Exercise 9.2 – DOM Family Relations</a></h3>
+                <p>Em dùng firstChild, nextSibling và parentNode để kiểm tra quan hệ giữa các nút trong cây DOM. Qua nodeType trong Console, em phân biệt nút văn bản và nút phần tử để chỉ đổi màu nền của các khối nội dung.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab09-walkthrough03.html">Exercise 9.3 – Modifying the DOM</a></h3>
+                <p>Em tạo một đoạn văn bằng createElement() và createTextNode(), sau đó chèn vào trang bằng appendChild(). Em dùng removeChild() để xóa mục “24 chapters” và kiểm tra trên trình duyệt rằng đoạn mới đã xuất hiện, còn mục thống kê đã được gỡ.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab09-walkthrough04.html">Exercise 9.4 – Simple Event Handling</a></h3>
+                <p>Em gắn sự kiện click để nút Hide/Show điều khiển việc ẩn hoặc hiện đoạn mô tả và đổi nhãn theo trạng thái. Em dùng mouseover và mouseout để chuyển ảnh sang trắng đen khi rê chuột vào và khôi phục màu gốc khi đưa chuột ra.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab09-walkthrough05.html">Exercise 9.5 – Responding to Load Events</a></h3>
+                <p>Em thử đọc innerHTML của div1 trước khi phần tử được tạo và quan sát TypeError trong Console. Sau khi chuyển lệnh vào bộ xử lý sự kiện load, hộp thoại hiển thị “This is div 1”, xác nhận phần tử đã có khi đoạn mã chạy.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab09-walkthrough05.html">Exercise 9.6 – Debugging Events</a></h3>
+                <p>Em đặt điểm dừng trước lệnh alert() trong Chrome DevTools và dùng Scope để kiểm tra biến cục bộ divToGet. Khi rê chuột vào ô thứ ba, em dùng Watch để theo dõi e.target.id và đối chiếu giá trị “div3” với thông báo hiện trên trang.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab09-walkthrough07.html">Exercise 9.7 – Working with Forms</a></h3>
+                <p>Em gắn sự kiện focus và blur cho các ô nhập để ô được chọn có nền vàng, còn ô vừa rời trở về nền trắng. Khi nhấn Tab từ Name sang Phone, em quan sát màu nền chuyển sang ô Phone theo vị trí nhập liệu.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab09-walkthrough08.html">Exercise 9.8 – Form Validation</a></h3>
+                <p>Em kiểm tra các trường bắt buộc khi bấm Register và chặn gửi biểu mẫu nếu còn ô trống. Khi chỉ điền Name, trang báo thiếu Phone, Email và Password. Khi điền đủ các trường và gửi lại, trang tải lại với biểu mẫu trống và khung báo lỗi biến mất.</p>
+            </li>
+        </ol>
+    </main>
+</body>
+</html>

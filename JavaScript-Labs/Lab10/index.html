@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 10 · jQuery</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-name" href="../index.html">Khánh Ngọc</a>
+            <nav aria-label="Điều hướng Lab">
+                <a href="../index.html#labs">← Danh sách các Lab</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="container detail">
+        <p class="lab-label">Lab 10</p>
+        <h1 lang="en">jQuery</h1>
+        <p class="detail-intro">Thực hành bộ chọn, trình xử lý sự kiện, hiệu ứng và yêu cầu GET bằng jQuery.</p>
+        <h2 class="exercise-heading">Danh sách Exercise</h2>
+        <p class="detail-intro">Exercise 10.1 và 10.2 dùng chung một trang HTML. Kiểm tra phiên bản jQuery trong Console cho bài 10.1.</p>
+        <ol class="exercise-list">
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough01.html">Exercise 10.1 – Set Up jQuery</a></h3>
+                <p>Em nạp jQuery 3.1.1 từ CDN và thiết lập tệp trong thư mục js để dùng dự phòng. Trong Console, em kiểm tra phiên bản thư viện đã nạp và nhận được kết quả “3.1.1”.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough01.html">Exercise 10.2 – Basic Selectors</a></h3>
+                <p>Em dùng bộ chọn theo ID, tên thẻ và lớp để lấy các phần tử trên trang. Em thử val() và html() để đổi nội dung ô nhập và phần tiêu đề, rồi dùng attr() để đọc tên lớp của ô nhập. Cuối cùng, em dùng css() và addClass() để đổi nền trang, màu nút và làm nổi bật các khối thống kê.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough03.html">Exercise 10.3 – Advanced Selectors</a></h3>
+                <p>Em dùng :password để chọn và tô vàng hai ô nhập mật khẩu trong biểu mẫu. Sau đó, em thử :nth-child(4n) để tô vàng ô Email và Password Again, rồi dùng :contains() để đổi màu chữ trên hai nhãn mật khẩu.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough04.html">Exercise 10.4 – jQuery Listeners</a></h3>
+                <p>Em gắn click, mousemove và mouseleave cho ô tương tác để trang phản hồi khi bấm, hiển thị tọa độ khi rê chuột và hiện “goodbye!” khi chuột rời ô. Ở lần thử cuối, thao tác bấm ô gọi off() để gỡ trình xử lý mousemove và hiện thông báo “stopped move reporting”.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough05.html">Exercise 10.5 – Inserting DOM Elements</a></h3>
+                <p>Em tạo một phần tử ảnh bằng jQuery rồi dùng append() và prepend() để thử chèn vào cuối hoặc đầu ô nội dung. Em so sánh với before() và after(), hai cách đặt ảnh bên ngoài ô. Em dùng thêm appendTo(), prependTo() và insertBefore() để kiểm tra vị trí ảnh khi gọi phương thức từ chính phần tử được chèn.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough06.html">Exercise 10.6 – Simple jQuery Animation</a></h3>
+                <p>Em gắn sáu nút điều khiển để hiện, ẩn hoặc chuyển đổi trạng thái của ảnh bằng các hiệu ứng mờ dần và trượt của jQuery. Em kiểm tra ảnh hiện đầy đủ với Fade In, mờ dần với Fade Out và chỉ hiện một phần trong lúc Toggle Slide đang chạy.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough07.html">Exercise 10.7 – More jQuery Animation</a></h3>
+                <p>Khi rê chuột lên ảnh thu nhỏ, em dùng jQuery để chuyển ảnh sang màu xám và hiện khung ảnh phóng to bằng fadeIn(). Khung lấy tên địa điểm từ thuộc tính alt, di chuyển theo con trỏ và được gỡ khi chuột rời ảnh. Em kiểm tra hiệu ứng với ảnh có chú thích “Battle, UK”.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough08.html">Exercise 10.8 – Complex Animations</a></h3>
+                <p>Em thử animate() để dịch ô sang phải, sau đó thay đổi đồng thời vị trí ngang, độ trong suốt và chiều cao. Ở bước cuối, em nối ba lệnh để ô trượt sang phải và thu thấp, tiếp đó trượt xuống và mờ đi, rồi cao lên 200 px trong 2 giây.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough09.html">Exercise 10.9 – GET Requests</a></h3>
+                <p>Em mở trực tiếp dịch vụ thành phố trong Chrome để xem cấu trúc JSON và xác định trường name. Khi bấm Consume, $.get() lấy dữ liệu và hiển thị tên từng thành phố trên một dòng. Em dùng $.each() ở bước cuối để tạo danh sách có dấu đầu dòng.</p>
+            </li>
+            <li class="exercise">
+                <h3><a href="./lab10-walkthrough10.html">Exercise 10.10 – jqXHR Handling</a></h3>
+                <p>Em dùng đối tượng jqXHR trả về từ $.get() để xử lý các kết quả của yêu cầu. Trong lần tải thành công, done() hiển thị danh sách thành phố, còn lần thử Offline gọi fail() để hiện hộp thoại báo lỗi. Ở cả hai trường hợp, always() làm vòng xoay tải mờ dần sau khi yêu cầu kết thúc.</p>
+            </li>
+        </ol>
+    </main>
+</body>
+</html>
