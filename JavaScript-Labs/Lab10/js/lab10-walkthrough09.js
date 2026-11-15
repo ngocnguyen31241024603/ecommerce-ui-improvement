@@ -1,6 +1,6 @@
 $(function () {
     $("#consume").on("click", function () {
-        var url = "http://randyconnolly.com/funwebdev/services/travel/cities.php";
+        var url = "./cities.json";
 
         $.get(url, function (cities, status) {
             if (status === "success") {

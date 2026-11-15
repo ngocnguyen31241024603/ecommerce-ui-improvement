@@ -5,7 +5,7 @@ $(function () {
         loading.show();
 
         $.get({
-            url: "http://randyconnolly.com/funwebdev/services/travel/cities.php",
+            url: "./cities.json",
             dataType: "json"
         })
             .done(function (cities) {
