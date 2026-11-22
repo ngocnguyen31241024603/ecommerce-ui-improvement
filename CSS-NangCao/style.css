@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light;
+  --paper: #f8f6f0;
+  --ink: #20271e;
+  --muted: #4d584b;
+  --accent: #34553e;
+  --rule: #d6ddce;
+  --panel: #f0f2e8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1rem; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font: 1rem/1.65 system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: .22em; }
+a:focus-visible { outline: 3px solid #795e31; outline-offset: 4px; }
+.wrap { width: min(72rem, calc(100% - 3rem)); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-nav, .site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.6rem;
+}
+.site-nav { justify-content: space-between; padding-block: 1rem; }
+.site-nav ul { margin: 0; padding: 0; list-style: none; }
+.site-nav a { color: var(--ink); text-decoration: none; }
+.site-nav a:hover { text-decoration: underline; }
+.name { font: bold 1.35rem/1.2 Georgia, serif; }
+.skip-link {
+  position: absolute;
+  z-index: 1;
+  inset: .5rem auto auto .5rem;
+  padding: .5rem .8rem;
+  background: white;
+  transform: translateY(-150%);
+}
+.skip-link:focus { transform: none; }
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(15rem, .75fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  padding-block: clamp(3rem, 8vw, 7rem);
+}
+h1, h2, h3 { margin: 0; line-height: 1.15; }
+h1, main > section > h2, .profile h2 { font-family: Georgia, serif; }
+h1 { font-size: clamp(3.4rem, 8vw, 7rem); font-weight: 500; letter-spacing: -.055em; }
+main > section > h2 { font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 500; }
+.course {
+  margin: 0 0 .8rem;
+  color: var(--accent);
+  font-size: .8rem;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.subtitle { margin: .35rem 0 1rem; font-size: 1.25rem; color: var(--muted); }
+.intro > p:last-of-type { max-width: 36rem; color: var(--muted); }
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: .6rem;
+  padding: .7rem 1rem;
+  border-radius: .3rem;
+  background: var(--accent);
+  color: white;
+  font-weight: 650;
+  text-decoration: none;
+}
+.button:hover { background: #244331; }
+.profile { overflow: hidden; border: 1px solid var(--rule); border-radius: .55rem; background: #fffdf8; }
+.profile img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; object-position: 50% 40%; }
+.profile-info { padding: 1rem 1.2rem 1.2rem; }
+.profile h2 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); }
+.profile dl { margin: .8rem 0 .6rem; }
+.profile dl div { display: flex; flex-wrap: wrap; gap: 0 .75rem; }
+.profile dt { color: var(--muted); min-width: 7rem; }
+.profile dd { margin: 0; font-weight: 650; overflow-wrap: anywhere; }
+
+.exercises { padding-top: 1.7rem; border-top: 1px solid var(--rule); }
+.topics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.topic {
+  padding: 1.2rem;
+  border: 1px solid var(--rule);
+  border-radius: .45rem;
+  background: #fffdf8;
+}
+.topic h3 { font-size: 1.12rem; }
+.topic p { margin: .6rem 0; color: var(--muted); }
+.topic ul { list-style: none; margin: 0; padding: 0; }
+.topic li { border-top: 1px solid var(--rule); }
+.topic a {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  align-items: baseline;
+  gap: .3rem;
+  padding-block: .42rem;
+  text-decoration: none;
+}
+.topic a:hover { text-decoration: underline; }
+.topic span { font-variant-numeric: tabular-nums; font-weight: 700; }
+.note { color: var(--muted); font-size: .93rem; }
+.reflection {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-block: 3rem;
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  border-radius: .45rem;
+  background: var(--panel);
+}
+.reflection p { margin: 0; max-width: 69ch; }
+.site-footer { padding-block: 1rem 2rem; border-top: 1px solid var(--rule); }
+
+@media (max-width: 860px) {
+  .topics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .wrap { width: calc(100% - 2rem); }
+  .hero, .topics, .reflection { grid-template-columns: 1fr; }
+  .hero { padding-block: 2.5rem; gap: 1.6rem; }
+  .profile { max-width: 25rem; }
+  .site-nav { gap: .6rem 1rem; }
+  .site-nav ul { gap: .2rem .9rem; }
+  .reflection { gap: .9rem; }
+}

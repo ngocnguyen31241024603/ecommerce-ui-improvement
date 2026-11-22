@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 07 CSS nâng cao | Khánh Ngọc</title>
+  <meta name="description" content="Portfolio Lab 07 CSS nâng cao của Nguyễn Thị Khánh Ngọc">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Đến nội dung</a>
+  <header class="site-header">
+    <nav class="wrap site-nav" aria-label="Điều hướng chính">
+      <a class="name" href="./">Khánh Ngọc</a>
+      <ul>
+        <li><a href="#bai-thuc-hanh">Bài thực hành</a></li>
+        <li><a href="#tu-danh-gia">Tự đánh giá</a></li>
+        <li><a href="https://github.com/ngocnguyen31241024603">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="intro">
+        <p class="course">Phát triển ứng dụng thương mại điện tử</p>
+        <h1 id="hero-title">CSS nâng cao</h1>
+        <p class="subtitle">Lab 07 · Advanced CSS Layout</p>
+        <p>Trong Lab 07, em thực hành định vị phần tử, xây dựng bố cục nhiều cột và chuyển giao diện sang một cột trên điện thoại. Em dùng CSS để tạo phản hồi khi rê chuột và thử Bootstrap để tổ chức các vùng nội dung bằng lưới 12 cột.</p>
+        <a class="button" href="#bai-thuc-hanh">Xem 19 bài thực hành <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="profile">
+        <img src="images/anh-ca-nhan.jpg" width="960" height="1280" alt="Chân dung Nguyễn Thị Khánh Ngọc">
+        <div class="profile-info">
+          <h2>Nguyễn Thị Khánh Ngọc</h2>
+          <dl>
+            <div><dt>MSSV</dt><dd>31241024603</dd></div>
+            <div><dt>Lớp học phần</dt><dd>26C1INF50902702</dd></div>
+          </dl>
+          <a href="https://github.com/ngocnguyen31241024603">GitHub cá nhân</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="exercises" id="bai-thuc-hanh" aria-labelledby="exercises-title">
+      <h2 id="exercises-title">Bài thực hành và kỹ năng</h2>
+      <div class="topics">
+      <section class="topic">
+        <h3>Luồng trang và định vị</h3>
+        <p>Dùng display, position và z-index để kiểm soát vị trí và thứ tự hiển thị.</p>
+        <ul>
+          <li><a href="Lab07/lab07-exercise01.html"><span>7.1</span> Document Flow</a></li>
+          <li><a href="Lab07/lab07-exercise02.html"><span>7.2</span> Relative Positioning</a></li>
+          <li><a href="Lab07/lab07-exercise03.html"><span>7.3</span> Absolute Positioning</a></li>
+          <li><a href="Lab07/lab07-exercise04.html"><span>7.4</span> Stacking Using Z-Index</a></li>
+        </ul>
+      </section>
+
+      <section class="topic">
+        <h3>Float và lớp phủ</h3>
+        <p>Thử bố trí ảnh cùng văn bản, ngắt luồng với clear và đặt chú thích trên ảnh.</p>
+        <ul>
+          <li><a href="Lab07/lab07-exercise05.html"><span>7.5</span> Floating Elements</a></li>
+          <li><a href="Lab07/lab07-exercise06.html"><span>7.6</span> Floating in a Container</a></li>
+          <li><a href="Lab07/lab07-exercise07.html"><span>7.7</span> Floating Multiple Items</a></li>
+          <li><a href="Lab07/lab07-exercise08.html"><span>7.8</span> Floating and Clearing</a></li>
+          <li><a href="Lab07/lab07-exercise09.html"><span>7.9</span> Using Positioning</a></li>
+        </ul>
+      </section>
+
+      <section class="topic">
+        <h3>Bố cục responsive</h3>
+        <p>Xây dựng bố cục hai và ba cột, rồi điều chỉnh điều hướng bằng media query và viewport.</p>
+        <ul>
+          <li><a href="Lab07/lab07-exercise10.html"><span>7.10</span> Two-Column Layout</a></li>
+          <li><a href="Lab07/lab07-exercise11.html"><span>7.11</span> Three-Column Layout</a></li>
+          <li><a href="Lab07/lab07-exercise12.html"><span>7.12</span> Media Queries</a></li>
+          <li><a href="Lab07/lab07-exercise12.html"><span>7.13</span> Setting the Viewport</a></li>
+        </ul>
+      </section>
+
+      <section class="topic">
+        <h3>Hiệu ứng CSS</h3>
+        <p>Thực hành biến đổi hình ảnh, chuyển đổi khi rê chuột, bộ lọc và chuyển động theo keyframe.</p>
+        <ul>
+          <li><a href="Lab07/lab07-exercise14.html"><span>7.14</span> Transforms</a></li>
+          <li><a href="Lab07/lab07-exercise15.html"><span>7.15</span> Transitions</a></li>
+          <li><a href="Lab07/lab07-exercise16.html"><span>7.16</span> More Transitions</a></li>
+          <li><a href="Lab07/lab07-exercise17.html"><span>7.17</span> Filters</a></li>
+          <li><a href="Lab07/lab07-exercise18.html"><span>7.18</span> Animations</a></li>
+        </ul>
+      </section>
+
+      <section class="topic">
+        <h3>Lưới Bootstrap</h3>
+        <p>Dùng hệ lưới 12 cột, thanh điều hướng và các cột lồng nhau để xây dựng trang responsive.</p>
+        <ul>
+          <li><a href="Lab07/lab07-exercise19.html"><span>7.19</span> Using Bootstrap</a></li>
+        </ul>
+      </section>
+      </div>
+      <p class="note">Bài 7.12 và 7.13 dùng chung một trang. Thử thu hẹp cửa sổ để xem thanh điều hướng chuyển sang ô chọn.</p>
+    </section>
+
+    <section class="reflection" id="tu-danh-gia" aria-labelledby="reflection-title">
+      <h2 id="reflection-title">Tự đánh giá sau Lab 07</h2>
+      <p>Qua Lab 07, em hiểu cách document flow, position, z-index và float ảnh hưởng đến vị trí của phần tử. Phần em thấy hữu ích nhất là bài 7.13. Khi kiểm tra ở 390 px, em thấy việc khai báo viewport và dùng media query giúp thanh điều hướng đổi từ danh sách liên kết sang ô chọn phù hợp với điện thoại. Em cũng thực hành transition, animation và Bootstrap để điều khiển hiệu ứng và chia cột. Với website thương mại điện tử, em có thể dùng lưới responsive để dàn các thẻ sản phẩm, giữ bộ lọc cạnh danh sách trên máy tính và chuyển bộ lọc lên trên ở điện thoại. Hiệu ứng hover nhẹ có thể làm rõ nút xem sản phẩm hoặc thêm vào giỏ hàng.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><a href="https://github.com/ngocnguyen31241024603/ecommerce-ui-improvement">Mã nguồn trên GitHub</a></div>
+  </footer>
+</body>
+</html>
