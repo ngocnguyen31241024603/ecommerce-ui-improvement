@@ -1,0 +1,35 @@
+# Build and deployment output
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+*.zip
+
+# Local configuration and credentials
+appsettings*.json
+!appsettings.example.json
+*.user
+*.pubxml
+*.pubxml.user
+*.publishsettings
+.env
+.env.*
+secrets.json
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Local data and editor files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+*.bak
+*.trn
+*.log
+.vs/
+.DS_Store
+__MACOSX/

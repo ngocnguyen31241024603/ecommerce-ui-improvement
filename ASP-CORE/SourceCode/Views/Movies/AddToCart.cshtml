@@ -1,0 +1,47 @@
+@model _31241024603_NguyenThiKhanhNgoc.Models.HoaDon
+
+@{
+    ViewBag.Title = "Giỏ hàng";
+}
+
+<h2>Your cart</h2>
+
+<table id="cartTable" class="table">
+    <thead>
+        <tr>
+            <th>Số lượng</th>
+            <th>Sản phẩm</th>
+            <th class="text-end">Giá</th>
+            <th class="text-end">Thành tiền</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ChiTietHoaDons)
+        {
+            <tr>
+                <td class="text-center">@item.SoLuong</td>
+                <td>@item.MovieObj.Title</td>
+                <td class="text-end">@item.MovieObj.Price.ToString("N0")</td>
+                <td class="text-end">@((item.SoLuong * item.MovieObj.Price).ToString("N0"))</td>
+                <td>
+                    <a class="btn btn-sm btn-warning"
+                       asp-action="RemoveFromCart"
+                       asp-route-maMovies="@item.MaMovie">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-end">Total:</td>
+            <td class="text-end">@Model.TongTien.ToString("N0")</td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" asp-action="Index">Continue shopping</a>
+    <a class="btn btn-primary" asp-action="Checkout">Checkout now</a>
+</div>

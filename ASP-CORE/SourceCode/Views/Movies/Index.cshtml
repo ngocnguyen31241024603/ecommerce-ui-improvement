@@ -1,0 +1,27 @@
+@model IEnumerable<_31241024603_NguyenThiKhanhNgoc.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>31241024603 - Nguyễn Thị Khánh Ngọc</h2>
+
+<div class="container">
+    <div class="row grid-demo">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <img src="@item.PicturePath" alt="@item.Title" style="width: 200px;" />
+
+                <p>Tiêu đề: @item.Title</p>
+                <p>Xếp hạng: @item.Rated</p>
+                <p>Giá: @Html.DisplayFor(modelItem => item.Price)</p>
+                <p>Tóm tắt: @item.Summary</p>
+                <p>Ngày phát hành: @item.ReleaseDate.ToString("dd/MM/yyyy")</p>
+                <p>Thể loại: @item.GenreObj?.Name</p>
+
+                <a class="btn btn-primary" asp-action="AddToCart" asp-route-id="@item.ID">Mua</a>
+            </div>
+        }
+    </div>
+</div>

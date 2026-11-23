@@ -1,0 +1,9 @@
+@model _31241024603_NguyenThiKhanhNgoc.Models.HoaDon
+
+<div class="navbar-text ms-3">
+    <b>Giỏ hàng của bạn:</b>
+    @Model.ChiTietHoaDons.Sum(item => item.SoLuong) sản phẩm,
+    @Model.TongTien.ToString("N0")
+    <a class="btn btn-outline-primary btn-sm ms-2"
+       asp-controller="Movies" asp-action="Checkout">Checkout</a>
+</div>
