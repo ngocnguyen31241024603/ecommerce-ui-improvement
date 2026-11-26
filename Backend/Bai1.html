@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        figure {
+            transform: skew(-20deg);
+            filter: blur(5px) hue-rotate(60deg) saturate(2);
+        }
+        .BIT {
+            background-color: #146d37;
+            transition-property: background-color;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            transition-delay: 0s;
+        }
+        .BIT:hover {
+            background-color: #60b946;
+        }
+        	div.at-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+	.at-item {
+		color: #3079ed; font-weight:bold; font-size:3em;
+		
+		animation-name: text-shadow-multicolor2;
+		animation-duration: 2.2s;
+		animation-timing-function: ease-in;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+			
+		/* shorthand
+		animation: text-shadow-multicolor2 2.2s ease-in 0s infinite normal forwards;*/
+	}
+	@keyframes text-shadow-multicolor2 {
+			
+		0% {
+			text-shadow:0 0 black, 0 0 red, 0 0 orange,0 0 yellow,0 0 green,0 0 skyblue,0 0 blue,0 0 white;
+			transform:translateX(0) translateY(0);
+		}
+		100% {
+			text-shadow:-1px -1px black,-3px -3px red,-5px -5px orange,-7px -7px yellow,-9px -9px green,-11px -11px skyblue,-13px -13px blue,-15px -15px white;
+			transform:translateX(8px) translateY(8px);
+		}
+	}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css" integrity="sha512-2Y1LPeWOu09QZSgUhuoUCW5MaLnowaDUMcQCDCbc4wNKyyzKMYwTpJQ1aK7CkUCclcZ1SLNlMIdMPKaoe4kGrQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    <figure>
+        <img width="200" src="https://ueh.edu.vn/schools/college/images/logo/bit-header-logo.png">
+        <figcaption>BIT</figcaption>
+    </figure>
+    <button class="BIT">BIT</button>
+    <button class="hvr-wobble-to-top-right hvr-rectangle-out">PTUDTMDT</button>
+    <div class='at-container'>
+	    <div class='at-item' >ĐẠI HỌC UEH</div>
+    </div>
+    <button class="animate__animated animate__bounce animate__infinite">BACKEND</button>
+</body>
+</html>

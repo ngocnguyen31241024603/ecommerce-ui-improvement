@@ -1,0 +1,16 @@
+# Local task data may contain personal information; let the app seed this file locally.
+/data/tasks.json
+
+# Node and local machine files
+/node_modules/
+.DS_Store
+*.log
+npm-debug.log*
+
+# Local environment secrets
+.env
+.env.*
+!.env.example
+
+# SQLite generated on first run
+/data/*.sqlite*

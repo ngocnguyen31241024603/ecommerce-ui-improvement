@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f8fc">
+  <title>Khén Nọc — Quản lý công việc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="noise"></div>
+  <div class="app-shell">
+    <aside class="sidebar glass">
+      <a class="brand" href="#"><span class="brand-mark"><i></i><i></i><i></i></span><span>Khén Nọc</span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <button class="nav-item active" data-view="today"><span class="nav-icon">☑</span><span>Checklist</span><span class="nav-count" id="nav-today-count">4</span></button>
+        <button class="nav-item" data-view="all"><span class="nav-icon">▤</span><span>Tất cả task</span></button>
+        <button class="nav-item" data-view="stats"><span class="nav-icon">◒</span><span>Thống kê</span></button>
+      </nav>
+      <div class="side-separator"></div>
+      <div class="workspace-label">DANH MỤC <button class="tiny-plus" id="add-category" aria-label="Thêm danh mục">+</button></div>
+      <div class="category-list" id="category-list"></div>
+      <div class="sidebar-spacer"></div>
+      <div class="storage-card">
+        <span class="storage-pulse"></span><div><strong id="storage-type">SQLite</strong><small id="connection-label">Đang kết nối…</small></div><span class="storage-menu">•••</span>
+      </div>
+      <div class="profile"><div class="avatar">N</div><div><strong>Ngọc</strong><small>Personal workspace</small></div><span class="profile-more">⌄</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="page-crumb">Checklist</strong></div>
+        <div class="top-actions"><span class="date-chip"><span class="live-dot"></span><span id="top-date"></span></span><button class="icon-button command-button" id="command-button" title="Tìm kiếm nhanh">⌕<kbd>⌘ K</kbd></button><button class="avatar small-avatar">N</button></div>
+      </header>
+
+      <section class="welcome reveal">
+        <div class="welcome-copy"><div class="eyebrow"><span class="sparkle">✳</span> HÔM NAY</div><h1 id="greeting">Chào buổi sáng, Ngọc<span class="title-period">.</span></h1><p>Một chút tập trung hôm nay, một bước tiến lớn ngày mai.</p></div>
+        <div class="orbit-art" aria-hidden="true"><div class="orbit-ring ring-a"></div><div class="orbit-ring ring-b"></div><div class="orbit-core"><span>09</span></div><span class="orbit-star star-a">✦</span><span class="orbit-star star-b">✧</span><span class="orbit-star star-c">·</span></div>
+      </section>
+
+      <div class="content-grid" id="content-grid">
+        <section class="tasks-panel glass reveal" id="tasks-panel">
+          <div class="section-heading"><div><div class="section-kicker">CHECKLIST HÔM NAY</div><h2 id="task-heading">Checklist hôm nay <span class="heading-count" id="heading-count">04</span></h2></div><button class="primary-button" id="new-task"><span>＋</span> Thêm task</button></div>
+          <div class="toolbar"><button class="search-box search-launch" type="button" id="search-trigger" aria-label="Mở tìm kiếm"><span class="search-trigger-icon">⌕</span><span class="search-launch-label" id="search-launch-label">Tìm kiếm task...</span><kbd>/</kbd></button><div class="filter-group"><label class="select-wrap"><span>Trạng thái</span><select id="status-filter"><option value="all">Tất cả</option><option value="todo">Cần làm</option><option value="in-progress">Đang làm</option><option value="done">Hoàn thành</option></select></label><label class="select-wrap priority-select"><span>Ưu tiên</span><select id="priority-filter"><option value="all">Tất cả</option><option value="high">Cao</option><option value="medium">Trung bình</option><option value="low">Thấp</option></select></label><button class="filter-button" id="clear-filters" title="Xóa bộ lọc">↺</button></div></div>
+          <div class="day-divider"><span id="today-label">HÔM NAY</span><i></i><span class="day-total" id="day-total">04 TASKS</span></div>
+          <div class="task-list" id="task-list" aria-live="polite"></div>
+          <div class="empty-state hidden" id="empty-state"><div class="empty-icon">⌕</div><strong>Không tìm thấy task</strong><span>Thử đổi từ khóa hoặc bộ lọc nhé.</span></div>
+          <footer class="list-footer"><span><span class="footer-dot"></span> <span id="storage-detail">Lưu tự động vào SQLite</span></span><span id="updated-label">Cập nhật vừa xong</span></footer>
+        </section>
+
+        <aside class="right-column">
+          <section class="focus-card glass reveal"><div class="focus-top"><div><div class="section-kicker">FOCUS MODE</div><h3>Giữ đà tiến lên</h3></div><span class="focus-symbol">✳</span></div><p>Chia nhỏ công việc, hoàn thành từng bước một.</p><div class="focus-progress"><div class="focus-progress-top"><span>Tiến độ hôm nay</span><strong id="focus-percent">50%</strong></div><div class="focus-track"><i id="focus-fill"></i></div></div><div class="focus-bottom"><span><b id="focus-done">2</b> trên <b id="focus-total">4</b> task hoàn thành</span><span class="focus-emoji">✦</span></div></section>
+          <section class="quote-card reveal"><div class="quote-mark">“</div><p>Great things are done by a series of small things brought together.</p><span>— Vincent van Gogh</span><div class="quote-glow"></div></section>
+        </aside>
+      </div>
+      <section class="stats-page hidden" id="stats-page">
+        <div class="stats-page-heading"><div><div class="section-kicker">YOUR ANALYTICS</div><h2>Bức tranh năng suất</h2><p>Theo dõi tiến độ và nhịp làm việc của bạn.</p></div><span class="stats-date-chip">◷ <span id="stats-date"></span></span></div>
+        <section class="stats-grid stats-page-kpis" id="dashboard-stats" aria-label="Tổng quan thống kê">
+          <article class="stat-card glass"><div class="stat-top"><span>Tasks hôm nay</span><span class="stat-icon violet">▤</span></div><div class="stat-value" id="stat-total">04</div><div class="stat-foot"><span class="stat-caption">Tổng công việc</span><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div></article>
+          <article class="stat-card glass"><div class="stat-top"><span>Đã hoàn thành</span><span class="stat-icon green">✓</span></div><div class="stat-value" id="stat-done">02<span class="stat-unit">/ 04</span></div><div class="stat-foot"><span class="progress-copy" id="progress-copy">50% tiến độ</span><div class="progress-line"><i id="progress-fill"></i></div></div></article>
+          <article class="stat-card glass"><div class="stat-top"><span>Đang thực hiện</span><span class="stat-icon blue">◌</span></div><div class="stat-value" id="stat-progress">01</div><div class="stat-foot"><span class="stat-caption">Giữ nhịp nhé!</span><span class="pulse-wave"><i></i><i></i><i></i><i></i><i></i></span></div></article>
+          <article class="stat-card glass"><div class="stat-top"><span>Ưu tiên cao</span><span class="stat-icon orange">↗</span></div><div class="stat-value" id="stat-priority">03</div><div class="stat-foot"><span class="stat-caption">Task cần chú ý</span><span class="priority-spark">✦ ✦ ✦</span></div></article>
+        </section>
+        <article class="trend-panel glass"><div class="section-heading compact"><div><div class="section-kicker">THỐNG KÊ THEO TUẦN</div><h3>Nhịp độ hoàn thành trong tuần</h3></div></div><div class="trend-content"><div class="chart-summary"><strong id="week-total">0</strong><span>công việc hoàn thành trong tuần</span></div><div class="chart" aria-label="Biểu đồ task hoàn thành trong tuần"><div class="chart-grid"><i></i><i></i><i></i></div><div class="chart-bars" id="chart-bars"></div></div><div class="chart-labels"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span></div></div></article>
+        <div class="analytics-panels"><article class="analytics-detail glass"><div class="section-heading compact"><div><div class="section-kicker">STATUS BREAKDOWN</div><h3>Trạng thái công việc</h3></div></div><div class="status-breakdown" id="status-breakdown"></div></article><article class="analytics-detail glass"><div class="section-heading compact"><div><div class="section-kicker">CATEGORY MIX</div><h3>Phân bổ danh mục</h3></div></div><div class="category-breakdown" id="category-breakdown"></div></article></div>
+      </section>
+      <footer class="app-footer"><span>Khén Nọc <i>·</i> v1.0</span><span>Made for your next big thing <b>✦</b></span></footer>
+    </main>
+  </div>
+
+  <dialog class="task-dialog animated-dialog" id="task-dialog">
+    <form id="task-form" method="dialog">
+      <div class="dialog-head"><div><span class="section-kicker">TASK EDITOR</span><h2 id="dialog-title">Tạo task mới</h2></div><button type="button" class="dialog-close" id="dialog-close" aria-label="Đóng">×</button></div>
+      <input type="hidden" id="task-id">
+      <label class="form-label">Tên task <span>*</span><input id="task-title" maxlength="100" placeholder="Ví dụ: Ôn lại bài học hôm nay" required></label>
+      <label class="form-label">Mô tả<textarea id="task-description" rows="3" placeholder="Thêm một vài chi tiết..." maxlength="500"></textarea></label>
+      <div class="form-row"><label class="form-label">Danh mục<select id="task-category"><option>Học tập</option><option>Dự án</option><option>Cá nhân</option></select></label><label class="form-label">Trạng thái<select id="task-status"><option value="todo">Cần làm</option><option value="in-progress">Đang làm</option><option value="done">Hoàn thành</option></select></label></div>
+      <div class="form-row"><label class="form-label">Ngày đến hạn<input type="date" id="task-date" required></label><label class="form-label">Giờ<input type="time" id="task-time"></label></div>
+      <label class="form-label">Mức ưu tiên<div class="priority-options"><label><input type="radio" name="priority" value="low"><span class="priority-choice low-choice">↘ Thấp</span></label><label><input type="radio" name="priority" value="medium"><span class="priority-choice medium-choice">● Trung bình</span></label><label><input type="radio" name="priority" value="high"><span class="priority-choice high-choice">↗ Cao</span></label></div></label>
+      <div class="dialog-actions"><button type="button" class="secondary-button" id="cancel-dialog">Hủy</button><button type="submit" class="primary-button" id="save-task">Lưu task <span>→</span></button></div>
+    </form>
+  </dialog>
+  <dialog class="search-dialog animated-dialog" id="search-dialog" aria-label="Tìm kiếm task">
+    <div class="search-modal">
+      <div class="search-modal-input"><span>⌕</span><input id="search-input" type="search" autocomplete="off" placeholder="Nhập từ khóa để tìm task..." aria-label="Từ khóa tìm kiếm"><button id="search-clear" type="button" aria-label="Xóa từ khóa">×</button></div>
+      <div class="suggestion-heading" id="suggestion-heading">GỢI Ý CHO BẠN</div>
+      <div class="search-suggestions" id="search-suggestions" role="listbox"></div>
+      <div class="search-shortcuts"><span><kbd>↑</kbd><kbd>↓</kbd> di chuyển</span><span><kbd>↵</kbd> chọn</span><span><kbd>esc</kbd> đóng</span></div>
+    </div>
+  </dialog>
+  <dialog class="task-dialog animated-dialog" id="confirm-dialog" aria-labelledby="confirm-title">
+    <div class="dialog-head"><div><span class="section-kicker">XÁC NHẬN</span><h2 id="confirm-title">Xóa task này?</h2></div><button type="button" class="dialog-close" id="confirm-close" aria-label="Đóng">×</button></div>
+    <p class="confirm-copy">Task <strong id="confirm-task-name"></strong> sẽ bị xóa khỏi danh sách.</p>
+    <div class="dialog-actions"><button type="button" class="secondary-button" id="confirm-cancel">Giữ lại</button><button type="button" class="danger-button" id="confirm-delete">Xóa task</button></div>
+  </dialog>
+  <dialog class="task-dialog animated-dialog" id="category-dialog" aria-labelledby="category-dialog-title">
+    <form id="category-form" method="dialog">
+      <div class="dialog-head"><div><span class="section-kicker">WORKSPACE</span><h2 id="category-dialog-title">Thêm danh mục</h2></div><button type="button" class="dialog-close" id="category-close" aria-label="Đóng">×</button></div>
+      <label class="form-label">Tên danh mục <span>*</span><input id="category-name" maxlength="60" placeholder="Ví dụ: Công việc" required></label>
+      <div class="dialog-actions"><button type="button" class="secondary-button" id="category-cancel">Hủy</button><button type="submit" class="primary-button">Tạo danh mục <span>→</span></button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

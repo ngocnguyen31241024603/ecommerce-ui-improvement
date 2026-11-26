@@ -1,0 +1,13 @@
+{
+  "name": "khen-noc-todo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ứng dụng quản lý công việc với Node.js và SQLite",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
